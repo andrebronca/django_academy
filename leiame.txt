@@ -1,0 +1,8 @@
+Última página lida: 26
+Data início da leitura: 07/04/2024
+Total de páginas: 306
+Ano da publicação: 2022
+
+--------------------
+Executar o projeto django: 
+> python manage.py runserver
