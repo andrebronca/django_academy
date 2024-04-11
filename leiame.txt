@@ -1,8 +1,40 @@
-Última página lida: 26
+Última página lida: 44
 Data início da leitura: 07/04/2024
 Total de páginas: 306
 Ano da publicação: 2022
 
---------------------
+-------------------- Utilizando no windows
+Criando uma máquina virtual
+> python -m venv .venv
+
+Acessar a máquina virtual
+> .venv\Scripts\Activate.ps1
+
+Instalar versão específica do django
+(.venv)> python -m pip install django~=4.0.0
+
 Executar o projeto django: 
 > python manage.py runserver
+
+Migração (criação de algumas tabelas de BD no SQLite)
+> python manage.py migrate
+
+Criando um aplicativo, no padrão MVT (MVTU)
+> python manage.py startapp pages
+
+Adicionar explicitamente o novo aplicativo criado para o projeto django
+> django_project/settings.py
+...
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    ...
+    'django.contrib.staticfiles',
+    'pages.apps.PagesConfig', # new. PagesConfig é a classe de apps
+]
+...
+
+Criando arquivo com pacotes instalados
+> pip freeze > requirements.txt
+------------------
+Está usando um ambiente virtual
+com o django 4.0 instalado.
